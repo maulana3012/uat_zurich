@@ -1073,6 +1073,10 @@ sub {
         line-height: 30px;
     }
 
+    .fullscreen .timeline-chapters__chapter {
+        line-height: 45px;
+    }
+
     .fullscreen.less-16-9 .timeline-chapters {
         line-height: calc(5vw * 9/16);
     }
