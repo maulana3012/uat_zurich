@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zurich Topas Life</title>
+</head>
+
+<meta name="description" content="...">
+<meta property="og:url" content="..." />
+<meta property="og:title" content="..." />
+<meta property="og:description" content="..." />
+<meta property="og:image" content="./images/og_image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="video.other" />
+
+<!-- Change this for non-english landing pages -->
+<meta property="og:locale" content="en_US" />
+<!-- Add a new meta tag for each language the landing page is offered in -->
+<meta property="og:locale:alternate" content="en_GB" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="...">
+<meta name="twitter:description" content="...">
+<meta name="twitter:image" content="./images/og_image.png">
+
+<!-- Set this to the twitter username for the landing page (if it exists) eg. "@eov_landing_page" -->
+<!-- <meta name="twitter:site" content="@username">-->
+
+<link href="./css/reset.css" rel="stylesheet">
+<link href="./css/structure.css" rel="stylesheet">
+<link href="./css/presentation.css" rel="stylesheet">
+<link href="./css/mtech.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<style type="text/css">
+  .box b {
+    width: 100px;
+  }
+</style>
+<!--[if lt IE 9]>
+    <link href="./css/mtech.css" rel="stylesheet">
+<![endif]-->
+<!--[if lt IE 10]>
+    <link href="./css/mtech.css" rel="stylesheet">
+<![endif]-->
+<!--[if lt IE 11]>
+    <link href="./css/mtech.css" rel="stylesheet">
+<![endif]-->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <link rel="canonical" href="..." />
+
+    <link rel="shortcut icon" href="./images/favicons/zlog.ico">
+
+    <!-- IE Mobile (Windows Phone) fix -->
+    <script>
+        (function() {
+            if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile/)) {
+                var msViewportStyle = document.createElement("style");
+                msViewportStyle.appendChild(
+                    document.createTextNode("@-ms-viewport{width:auto!important}")
+                );
+                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+            }
+        })();
+    </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<body>
+    <div id="navbar">
+      <div class="container">
+          <div class="navbar-header">
+             <img src="images/z.png" class="logo-dev">
+          </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div id="jsTopWrapper">
+            <main id="jsMain" class="main">
+
+                <div class="player">
+                    <div class="player__wrapper">
+                        <div class="player__iframe" id="jsPlayerIframe">
+                            {{VIDEO_IFRAME}}
+                        </div>
+                    </div>
+                </div>
+
+                <br class="clearfix" />
+
+                <div id="jsTimeline" aria-controls="videoPlayerIframe" class="timeline">
+                    <!-- <div id="jsTimelineCover" class="timeline__cover"></div> -->
+
+                    <div class="timeline__controls timeline__controls--left">
+                        <button id="jsSkipBackButton" type="button" class="jsTimelineButton timeline__button timeline__button--skip-back no-focus">
+                            <span class="timeline__button-icon timeline__button-icon--skip-back"></span>
+                            <span class="sr-only translate" data-translate="SkipBackButtonText">Skip back</span>
+                        </button>
+                        <button id="jsPlayPauseButton" type="button" class="jsTimelineButton timeline__button timeline__button--play-pause no-focus">
+                            <span class="timeline__button-icon timeline__button-icon--play"></span>
+                            <span id="jsPlayPauseSRText" class="sr-only translate" data-translate="PlayPauseButtonText">Play/Pause</span>
+                        </button>
+                        <button id="jsSkipForwardButton" type="button" class="jsTimelineButton timeline__button timeline__button--skip-forward no-focus">
+                            <span class="timeline__button-icon timeline__button-icon--skip-forward"></span>
+                            <span class="sr-only translate" data-translate="SkipForwardButtonText">Skip forward</span>
+                        </button>
+                    </div>
+
+                    <div class="timeline__controls timeline__controls--active-state">
+                        <div id="jsTimelineMobileActiveState" class="timeline-active-state__label"></div>
+                    </div>
+
+                    <div id="jsTimelineControlsCenter" class="timeline__controls timeline__controls--center">
+
+                        <div id="jsBufferTimeline" class="timeline-buffering"></div>
+
+                        <div id="jsTimelineProgressHover" class="timeline-progress-hover"></div>
+
+                        <div id="jsTimelineIndicator" class="timeline-progress-indicator">
+                            <div id="jsTimelineIndicatorBall" class="timeline-progress-indicator-ball"></div>
+                        </div>
+
+                        <div id="jsTimelineProgress" class="timeline-progress"></div>
+
+                        <div id="jsTimelineContainer" class="timeline-chapters"></div>
+                    </div>
+
+                    <div id="jsTimelineControlsRight" class="timeline__controls timeline__controls--right">
+                        <button id="jsVolumeButton" type="button" class="jsTimelineButton timeline__button timeline__button--volume no-focus">
+                            <span id="jsVolumeButtonIcon" class="timeline__button-icon timeline__button-icon--volume-2"></span>
+                            <span class="sr-only translate" data-translate="VolumeButtonText">Volume</span>
+                        </button>
+
+                        <div id="jsVolume" class="timeline-volume">
+                            <div id="jsVolumeBar" class="timeline-volume__bg"></div>
+                            <div id="jsVolumeLevelContainer" class="timeline-volume__container">
+                                <div id="jsVolumeLevel" class="timeline-volume__level">
+                                    <div id="jsVolumeBall" class="timeline-volume__ball"></div>
+                                    <span id="jsVolumeButtonSRText" class="sr-only translate" data-translate="VolumeButtonText">Volume</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="jsFullScreenButton" type="button" class="jsTimelineButton timeline__button timeline__button--fullscreen no-focus">
+                            <span id="jsFullScreenIcon" class="timeline__button-icon timeline__button-icon--fullscreen"></span>
+                            <span class="sr-only translate" data-translate="FullScreenButtonText">Full Screen</span>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="container-fluid">
+                <div class="col-lg-12">
+                    <p align="center" class="fheader">Informasi lebih lanjut hubungi:</p>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-4 pad-phone nod-i">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                    <a href="tel:+1500987" target="_blank"><i class="icon-sosmed icon--phone"></i></a>
+                                </div>
+                                <div class="col-lg-4 col-xs-6 pad-f-phone">
+                                    <p class="fphone">1500-ZUR(987)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 pad-mail nod-i">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                    <a href="mailto:customercare.indo@zurich.co.id" target="_blank"><i class="icon-sosmed icon--email"></i></a>
+                                </div>
+                                <div class="col-lg-4 col-xs-4 pad-f-mail">
+                                    <p class="fmail">Customercare.indo@zurich.co.id</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 pad-address nod-i">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                    <a href="https://goo.gl/maps/t1iqPZn8ifr2d3dV8" target="_blank"><i class="icon-sosmed icon--address"></i></a>
+                                </div>
+                                <div class="col-lg-9 col-xs-9 pad-f-address">
+                                    <p class="faddress">PT Zurich Topas Life, Mayapada Tower II Lt.3
+Jl.Jend. Sudirman Kav.27. Jakarta 12920</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-6">
+                    <div class="nod-sosmed">
+                        <ul class="social-network social-circle">
+                         <li><a href="https://www.facebook.com/ZurichID/" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-2x fa-facebook"></i></a></li>
+                         <li><a href="https://www.instagram.com/zurichid/" class="icoLinkedin" title="Instagram" target="_blank"><i class="fa fa-2x fa-instagram"></i></a></li>
+                         <li><a href="https://twitter.com/ZurichIndonesia" class="icoFacebook" title="Twitter" target="_blank"><i class="fa fa-2x fa-twitter"></i></a></li>
+                         <li><a href="https://www.youtube.com/channel/UCaKhmCNNA6pPuY56o3ej4tA" class="icoLinkedin" title="Youtube" target="_blank"><i class="fa fa-2x fa-youtube-play"></i></a></li>
+                         <li><a href="https://www.zurich.co.id/" class="icoLinkedin" title="Website"><i class="fa fa-2x fa-globe"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <p class="text-center text-muted copyr">&copy; Copyright 2020 - Zurich Topas Life</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/modernizr-custom.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/landing-page.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-20px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
+</html>
