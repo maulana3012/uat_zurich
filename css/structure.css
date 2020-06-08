@@ -1934,7 +1934,11 @@ and (orientation : portrait) {
     }
 
     .fullscreen .timeline-chapters {
-        line-height: 15px !important;
+        line-height: 5px;
+    }
+
+    .fullscreen .timeline-chapters__chapter {
+        line-height: 15px;
     }
 
     .timeline, .timeline__controls {
@@ -2091,7 +2095,11 @@ and (orientation : landscape) {
     }
 
     .fullscreen .timeline-chapters {
-        line-height: 15px !important;
+        line-height: 5px;
+    }
+
+    .fullscreen .timeline-chapters__chapter {
+        line-height: 15px;
     }
 
     .timeline, .timeline__controls {
@@ -2270,7 +2278,7 @@ and (orientation : portrait) {
     }
 
     .fullscreen .timeline-chapters {
-        line-height: 15px !important;
+        line-height: 5px !important;
     }
 
     .timeline, .timeline__controls {
@@ -2448,11 +2456,11 @@ and (orientation : landscape) {
     }
 
     .fullscreen .timeline-chapters {
-        line-height: 15px !important;
+        line-height: 5px ;
     }
 
     .fullscreen .timeline-chapters__chapter {
-        line-height: 40px;
+        line-height: 15px;
     }
 
     .timeline, .timeline__controls {
@@ -2630,7 +2638,11 @@ and (orientation : portrait) {
     }
 
     .fullscreen .timeline-chapters {
-        line-height: 15px !important;
+        line-height: 5px;
+    }
+
+    .fullscreen .timeline-chapters__chapter {
+        line-height: 15px;
     }
 
     .timeline, .timeline__controls {
@@ -2808,7 +2820,11 @@ and (orientation : landscape) {
     }
 
     .fullscreen .timeline-chapters {
-        line-height: 15px !important;
+        line-height: 5px;
+    }
+
+    .fullscreen .timeline-chapters__chapter {
+        line-height: 15px;
     }
 
     .timeline, .timeline__controls {
@@ -2988,7 +3004,11 @@ and (orientation : portrait) {
     }
 
     .fullscreen .timeline-chapters {
-        line-height: 15px !important;
+        line-height: 5px;
+    }
+
+    .fullscreen .timeline-chapters__chapter {
+        line-height: 15px;
     }
 
     .timeline, .timeline__controls {
@@ -3171,7 +3191,11 @@ and (orientation : landscape) {
     }
 
     .fullscreen .timeline-chapters {
-        line-height: 15px !important;
+        line-height: 5px;
+    }
+
+    .fullscreen .timeline-chapters__chapter {
+        line-height: 15px;
     }
 
     .timeline, .timeline__controls {
