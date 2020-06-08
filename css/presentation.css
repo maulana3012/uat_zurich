@@ -1240,15 +1240,21 @@ and (-webkit-min-device-pixel-ratio: 2) {
         height: 26px;
     }
 
+    .fullscreen .timeline__button--skip-back, 
+    .fullscreen .timeline__button--skip-forward, 
+    .fullscreen .timeline__button--play-pause {
+        width: 33.333%;
+    }
+
     .fullscreen .timeline__button-icon {
-        width: 18px;
-        height: 18px;
+        width: 12px;
+        height: 12px;
     }
 
     .fullscreen .timeline__button-icon--play,
     .fullscreen .timeline__button-icon--pause {
-        width: 20px;
-        height: 20px;
+        width: 13px;
+        height: 13px;
     }
 
     .timeline__button--skip-back,

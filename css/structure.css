@@ -1564,9 +1564,26 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width: 950px;
     }
 
+    .fullscreen .timeline {
+        height: 10%;
+        width: 100%;
+        z-index: 2;
+    }
+
     .player__wrapper {
         width: 950px;
         height: 480px;
+    }
+
+    .fullscreen .player {
+        width: 100%;
+        height: 90%;
+        margin: 0;
+    }
+
+    .fullscreen .player__wrapper {
+        width: 100%;
+        height: 100%;
     }
 
     .timeline-chapters {
@@ -1583,6 +1600,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .timeline__controls--left {
         width: 180px;
+    }
+
+    .fullscreen .timeline__controls--left {
+        width: 15%;
+    }
+
+    .fullscreen .timeline--no-volume .timeline__controls--center {
+        width: 75%;
     }
 
     .timeline--no-volume .timeline__controls--center {

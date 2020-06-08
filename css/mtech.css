@@ -2042,7 +2042,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .logo-dev {
       width: 40%;
       height: auto;
-      margin-left: 95% !important;
+      margin-left: 70% !important;
       padding: 25px 10px 10px 10px;
   }
 
